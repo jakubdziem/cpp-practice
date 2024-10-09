@@ -6,10 +6,8 @@
 
 #include <iostream>
 
-Cat::Cat(int limbNr, std::string name, bool protectedAnimal) {
-    this->limbNr = limbNr;
-    this->name = name;
-    this->protectedAnimal = protectedAnimal;
+Cat::Cat(int limbNr, std::string name, bool protectedAnimal) : Animal(limbNr, name, protectedAnimal) {
+
 }
 
 Cat::Cat() {
@@ -43,6 +41,7 @@ int Cat::getMice(int index) {
     if(index >= 1 && index <= 5) {
         return this->mice[index - 1];
     }
+    return 0;
 }
 
 void Cat::giveVoice() {
@@ -67,6 +66,6 @@ void Cat::howManyCats(Cat *cats, int nCats) {
         for(int j = 0; j < 5; j++) {
             sum += mice[j];
         }
-        std::cout << sum << "\n";
+        std::cout << "Cat " << cats[i].getName() << " caught " << sum << " mice in total.\n";
     }
 }

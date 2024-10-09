@@ -8,7 +8,11 @@
 #include <stdexcept>
 #include <bits/locale_facets_nonio.h>
 
-Dog::Dog(std::string breed, int levelOfGuideSkills, int levelOfTrackerSkills) {
+Dog::Dog(std::string name, int limbNr, bool protectedAnimal, std::string breed, int levelOfGuideSkills,
+         int levelOfTrackerSkills) {
+    this->limbNr = limbNr;
+    this->name = name;
+    this->protectedAnimal = protectedAnimal;
     this->breed = breed;
     this->levelOfGuideSkills = levelOfGuideSkills;
     this->levelOfTrackerSkills = levelOfTrackerSkills;
@@ -17,10 +21,7 @@ Dog::Dog(std::string breed, int levelOfGuideSkills, int levelOfTrackerSkills) {
 Dog::Dog() {
 }
 
-Dog::Dog(int limbNr, std::string name, bool protectedAnimal) {
-    this->limbNr = limbNr;
-    this->name = name;
-    this->protectedAnimal = protectedAnimal;
+Dog::Dog(int limbNr, std::string name, bool protectedAnimal) : Animal(limbNr, name, protectedAnimal) {
 }
 
 void Dog::setSkillLevel(int type, int value) {
@@ -44,6 +45,7 @@ int Dog::getSkillLevel(int type) {
         return this->levelOfTrackerSkills;
     } else {
         std::cout<<"Invalid Skill Type (0 = levelOfGuideSkills, 1 = levelOfTrackerSkills)";
+        return 0;
     }
 }
 
@@ -70,3 +72,5 @@ int Dog::howManyTrackerDogs(Dog *dogs, int nDogs) {
     }
     return counter;
 }
+
+

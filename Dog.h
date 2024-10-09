@@ -13,7 +13,7 @@ private:
     int levelOfGuideSkills;
     int levelOfTrackerSkills;
 public:
-    Dog(std::string breed, int levelOfGuideSkills, int levelOfTrackerSkills);
+    Dog(std::string name, int limbNr, bool protectedAnimal,std::string breed, int levelOfGuideSkills, int levelOfTrackerSkills);
     Dog();
     Dog(int limbNr, std::string name, bool protectedAnimal);
     void setSkillLevel(int type, int value);

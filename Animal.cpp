@@ -49,7 +49,7 @@ void Animal::info() {
     std::cout << "ProtectedAnimal: " << protectedAnimal << "\n";
 }
 
-int Animal::howManyProtectedAnimals(Animal *animals, int nAnimals) {
+int Animal::howManyProtectedAnimals(Animal* animals, int nAnimals) {
     int count = 0;
     for (int i = 0; i < nAnimals; i++) {
         if (animals[i].protectedAnimal) {
@@ -58,3 +58,4 @@ int Animal::howManyProtectedAnimals(Animal *animals, int nAnimals) {
     }
     return count;
 }
+
