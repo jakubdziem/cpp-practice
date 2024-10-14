@@ -1,35 +1,36 @@
 #include <iostream>
+#include <vector>
+#include "Bufor.h"
+#include "MeanBufor.h"
+#include "MaxBufor.h"
 
-#include "Animal.h"
-#include "Dog.h"
-#include "Cat.h"
+
 
 int main() {
-    Animal *animal = new Animal();
-    animal->info();
-    Dog dogs[] = {
-            Dog("Buddy", 4, false, "Golden Retriever", 2, 3),
-            Dog("Max", 4, false, "Beagle", 1, 0),
-            Dog("Rocky", 4, true, "German Shepherd", 3, 5),
-    };
-    dogs[0].info();
-    std::cout << Dog::howManyTrackerDogs(dogs, 3) << std::endl;
-    std::cout << Animal::howManyProtectedAnimals(dogs, 3) << std::endl;
+    Bufor* bufor1 = new MeanBufor(10);
+    Bufor* bufor2 = new MaxBufor(5);
 
+    bufor1->add(5);
+    bufor1->add(10);
+    bufor1->add(15);
 
-    int mice1[5] = {1, 2, 3, 4, 5};
-    int mice2[5] = {0, 1, 0, 0, 0};
-    int mice3[5] = {0, 0, 0, 0, 0};
+    bufor2->add(3);
+    bufor2->add(7);
+    bufor2->add(2);
+    bufor2->add(8);
+    bufor2->add(6);
+    bufor2->add(9);
 
-    Cat cats[] = {
-            Cat(4, "Whiskers", true),
-            Cat(4, "Tom", false),
-            Cat(4, "Shadow", true)
-    };
+    std::cout << "Tablica MeanBufor: ";
+    bufor1->showTab();
+    std::cout << "Srednia: " << bufor1->calculate() << std::endl;
 
-    cats[0].initMice(mice1);
-    cats[1].initMice(mice2);
-    cats[2].initMice(mice3);
+    std::cout << "Tablica MaxBufor: ";
+    bufor2->showTab();
+    std::cout << "Maksymalna wartosc: " << bufor2->calculate() << std::endl;
 
-    Cat::howManyCats(cats, 3);
+    delete bufor1;
+    delete bufor2;
+
+    return 0;
 }

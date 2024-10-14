@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "projeekt",
+					"name" : "Dziem_Jakub_5_3_Lab2_Zad3",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "projeekt::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-projeekt-Debug-76c7a90ebaac0d3d28e6.json",
-					"name" : "projeekt",
+					"id" : "cpp-practice::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cpp-practice-Debug-fdec7a2299c08edf5042.json",
+					"name" : "cpp-practice",
 					"projectIndex" : 0
 				}
 			]

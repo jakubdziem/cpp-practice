@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: projeekt
+# Project: Dziem_Jakub_5_3_Lab2_Zad3
 # Configurations: Debug
 # =============================================================================
 
@@ -41,55 +41,55 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/jakub/CLionProjects/cpp-practice/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target projeekt
+# Object build statements for EXECUTABLE target cpp-practice
 
 
 #############################################
-# Order-only phony target for projeekt
+# Order-only phony target for cpp-practice
 
-build cmake_object_order_depends_target_projeekt: phony || .
+build cmake_object_order_depends_target_cpp-practice: phony || .
 
-build CMakeFiles/projeekt.dir/main.cpp.obj: CXX_COMPILER__projeekt_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/main.cpp || cmake_object_order_depends_target_projeekt
-  DEP_FILE = CMakeFiles\projeekt.dir\main.cpp.obj.d
+build CMakeFiles/cpp-practice.dir/main.cpp.obj: CXX_COMPILER__cpp-practice_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/main.cpp || cmake_object_order_depends_target_cpp-practice
+  DEP_FILE = CMakeFiles\cpp-practice.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\projeekt.dir
-  OBJECT_FILE_DIR = CMakeFiles\projeekt.dir
+  OBJECT_DIR = CMakeFiles\cpp-practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\cpp-practice.dir
 
-build CMakeFiles/projeekt.dir/Animal.cpp.obj: CXX_COMPILER__projeekt_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/Animal.cpp || cmake_object_order_depends_target_projeekt
-  DEP_FILE = CMakeFiles\projeekt.dir\Animal.cpp.obj.d
+build CMakeFiles/cpp-practice.dir/Bufor.cpp.obj: CXX_COMPILER__cpp-practice_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/Bufor.cpp || cmake_object_order_depends_target_cpp-practice
+  DEP_FILE = CMakeFiles\cpp-practice.dir\Bufor.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\projeekt.dir
-  OBJECT_FILE_DIR = CMakeFiles\projeekt.dir
+  OBJECT_DIR = CMakeFiles\cpp-practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\cpp-practice.dir
 
-build CMakeFiles/projeekt.dir/Dog.cpp.obj: CXX_COMPILER__projeekt_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/Dog.cpp || cmake_object_order_depends_target_projeekt
-  DEP_FILE = CMakeFiles\projeekt.dir\Dog.cpp.obj.d
+build CMakeFiles/cpp-practice.dir/MeanBufor.cpp.obj: CXX_COMPILER__cpp-practice_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/MeanBufor.cpp || cmake_object_order_depends_target_cpp-practice
+  DEP_FILE = CMakeFiles\cpp-practice.dir\MeanBufor.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\projeekt.dir
-  OBJECT_FILE_DIR = CMakeFiles\projeekt.dir
+  OBJECT_DIR = CMakeFiles\cpp-practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\cpp-practice.dir
 
-build CMakeFiles/projeekt.dir/Cat.cpp.obj: CXX_COMPILER__projeekt_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/Cat.cpp || cmake_object_order_depends_target_projeekt
-  DEP_FILE = CMakeFiles\projeekt.dir\Cat.cpp.obj.d
+build CMakeFiles/cpp-practice.dir/MaxBufor.cpp.obj: CXX_COMPILER__cpp-practice_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/MaxBufor.cpp || cmake_object_order_depends_target_cpp-practice
+  DEP_FILE = CMakeFiles\cpp-practice.dir\MaxBufor.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\projeekt.dir
-  OBJECT_FILE_DIR = CMakeFiles\projeekt.dir
+  OBJECT_DIR = CMakeFiles\cpp-practice.dir
+  OBJECT_FILE_DIR = CMakeFiles\cpp-practice.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target projeekt
+# Link build statements for EXECUTABLE target cpp-practice
 
 
 #############################################
-# Link the executable projeekt.exe
+# Link the executable cpp-practice.exe
 
-build projeekt.exe: CXX_EXECUTABLE_LINKER__projeekt_Debug CMakeFiles/projeekt.dir/main.cpp.obj CMakeFiles/projeekt.dir/Animal.cpp.obj CMakeFiles/projeekt.dir/Dog.cpp.obj CMakeFiles/projeekt.dir/Cat.cpp.obj
+build cpp-practice.exe: CXX_EXECUTABLE_LINKER__cpp-practice_Debug CMakeFiles/cpp-practice.dir/main.cpp.obj CMakeFiles/cpp-practice.dir/Bufor.cpp.obj CMakeFiles/cpp-practice.dir/MeanBufor.cpp.obj CMakeFiles/cpp-practice.dir/MaxBufor.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\projeekt.dir
+  OBJECT_DIR = CMakeFiles\cpp-practice.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = projeekt.exe
-  TARGET_IMPLIB = libprojeekt.dll.a
-  TARGET_PDB = projeekt.exe.dbg
+  TARGET_FILE = cpp-practice.exe
+  TARGET_IMPLIB = libcpp-practice.dll.a
+  TARGET_PDB = cpp-practice.exe.dbg
 
 
 #############################################
@@ -117,7 +117,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build projeekt: phony projeekt.exe
+build cpp-practice: phony cpp-practice.exe
 
 # =============================================================================
 # Folder targets.
@@ -127,7 +127,7 @@ build projeekt: phony projeekt.exe
 #############################################
 # Folder: C:/Users/jakub/CLionProjects/cpp-practice/cmake-build-debug
 
-build all: phony projeekt.exe
+build all: phony cpp-practice.exe
 
 # =============================================================================
 # Built-in targets
