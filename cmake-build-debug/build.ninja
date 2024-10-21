@@ -55,20 +55,8 @@ build CMakeFiles/cpp-practice.dir/main.cpp.obj: CXX_COMPILER__cpp-practice_unsca
   OBJECT_DIR = CMakeFiles\cpp-practice.dir
   OBJECT_FILE_DIR = CMakeFiles\cpp-practice.dir
 
-build CMakeFiles/cpp-practice.dir/Bufor.cpp.obj: CXX_COMPILER__cpp-practice_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/Bufor.cpp || cmake_object_order_depends_target_cpp-practice
-  DEP_FILE = CMakeFiles\cpp-practice.dir\Bufor.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\cpp-practice.dir
-  OBJECT_FILE_DIR = CMakeFiles\cpp-practice.dir
-
-build CMakeFiles/cpp-practice.dir/MeanBufor.cpp.obj: CXX_COMPILER__cpp-practice_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/MeanBufor.cpp || cmake_object_order_depends_target_cpp-practice
-  DEP_FILE = CMakeFiles\cpp-practice.dir\MeanBufor.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\cpp-practice.dir
-  OBJECT_FILE_DIR = CMakeFiles\cpp-practice.dir
-
-build CMakeFiles/cpp-practice.dir/MaxBufor.cpp.obj: CXX_COMPILER__cpp-practice_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/MaxBufor.cpp || cmake_object_order_depends_target_cpp-practice
-  DEP_FILE = CMakeFiles\cpp-practice.dir\MaxBufor.cpp.obj.d
+build CMakeFiles/cpp-practice.dir/Array.cpp.obj: CXX_COMPILER__cpp-practice_unscanned_Debug C$:/Users/jakub/CLionProjects/cpp-practice/Array.cpp || cmake_object_order_depends_target_cpp-practice
+  DEP_FILE = CMakeFiles\cpp-practice.dir\Array.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\cpp-practice.dir
   OBJECT_FILE_DIR = CMakeFiles\cpp-practice.dir
@@ -81,7 +69,7 @@ build CMakeFiles/cpp-practice.dir/MaxBufor.cpp.obj: CXX_COMPILER__cpp-practice_u
 #############################################
 # Link the executable cpp-practice.exe
 
-build cpp-practice.exe: CXX_EXECUTABLE_LINKER__cpp-practice_Debug CMakeFiles/cpp-practice.dir/main.cpp.obj CMakeFiles/cpp-practice.dir/Bufor.cpp.obj CMakeFiles/cpp-practice.dir/MeanBufor.cpp.obj CMakeFiles/cpp-practice.dir/MaxBufor.cpp.obj
+build cpp-practice.exe: CXX_EXECUTABLE_LINKER__cpp-practice_Debug CMakeFiles/cpp-practice.dir/main.cpp.obj CMakeFiles/cpp-practice.dir/Array.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\cpp-practice.dir
