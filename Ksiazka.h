@@ -1,3 +1,9 @@
+//
+// Created by jakub on 18.11.2024.
+//
+
+#ifndef DZIEM_JAKUB_5_3_LAB2_ZAD3_KSIAZKA_H
+#define DZIEM_JAKUB_5_3_LAB2_ZAD3_KSIAZKA_H
 #include <iostream>
 #include <vector>
 #include <set>
@@ -8,7 +14,7 @@
 #include <boost/multi_index/member.hpp>
 #include <iostream>
 #include "Contact.h"
-
+#include "Person.h"
 using namespace boost::multi_index;
 using namespace std;
 typedef multi_index_container
@@ -19,26 +25,10 @@ typedef multi_index_container
                         hashed_non_unique<member<Contact, int, &Contact::wiek>>,
                         ordered_unique<member<Contact, string, &Contact::numerTelefonu>>,
                         hashed_non_unique<member<Contact, string, &Contact::ulica>>>> contact_multi;
-contact_multi ksiazkaTelefoniczna;
 
-void dodaj(string imie, string nazwisko, int wiek, string numerTelefonu, string ulica) {
-    if(ksiazkaTelefoniczna.get<3>().contains(numerTelefonu)) {
-        cout << "Ksiazka juz ma taki numer";
-    } else {
-        ksiazkaTelefoniczna.insert({imie, nazwisko, wiek, numerTelefonu, ulica});
-    }
-}
-void wyszukajZPrzedzialu(int dol, int gora) {
-    for(int i = dol; i <= gora; i++) {
-        auto os = ksiazkaTelefoniczna.get<2>().find(i);
-        cout << os -> imie << "\n";
-    }
-}
-int main() {
-    dodaj("Jakub", "Dziem", 21, "123456789", "Nadbystrzycka");
-    dodaj("Barbara", "Dodac", 18, "123456987", "Prosta");
-    dodaj("Anna", "Dziem", 30, "123456798", "Dluga");
-    auto osobaZUlica = ksiazkaTelefoniczna.get<4>().find("Nadbystrzycka");
-    cout << osobaZUlica -> imie << "\n";
-    wyszukajZPrzedzialu(20,30);
-}
+class Ksiazka {
+public:
+    contact_multi ksiazkaTele;
+};
+
+#endif //DZIEM_JAKUB_5_3_LAB2_ZAD3_KSIAZKA_H
