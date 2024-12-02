@@ -1,44 +1,41 @@
 #include <iostream>
-#include <vector>
-#include <set>
-#include <algorithm>
-#include <boost/multi_index_container.hpp>
-#include <boost/multi_index/hashed_index.hpp>
-#include <boost/multi_index/ordered_index.hpp>
-#include <boost/multi_index/member.hpp>
-#include <iostream>
-#include "Contact.h"
-
-using namespace boost::multi_index;
+#include <limits>
 using namespace std;
-typedef multi_index_container
-        <Contact,
-                indexed_by<
-                        hashed_non_unique<member<Contact, string, &Contact::imie>>,
-                        hashed_non_unique<member<Contact, string, &Contact::nazwisko>>,
-                        hashed_non_unique<member<Contact, int, &Contact::wiek>>,
-                        ordered_unique<member<Contact, string, &Contact::numerTelefonu>>,
-                        hashed_non_unique<member<Contact, string, &Contact::ulica>>>> contact_multi;
-contact_multi ksiazkaTelefoniczna;
+class MoreThan21Exception : public exception {
+private:
+public:
+    MoreThan21Exception(char * msg) {
+        cout << msg << endl;
+    }
+};
+int main(int argc, char *argv[])
+{
+        int suma = 0;
+        int liczbaProb = 0;
+        while (1) {
+            int liczba;
+            try {
+                while (cout << "Podaj liczbe calkowita:" && !(cin >> liczba)) {
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                    cerr << "To nie jest liczba" << endl;
+                }
 
-void dodaj(string imie, string nazwisko, int wiek, string numerTelefonu, string ulica) {
-    if(ksiazkaTelefoniczna.get<3>().contains(numerTelefonu)) {
-        cout << "Ksiazka juz ma taki numer";
-    } else {
-        ksiazkaTelefoniczna.insert({imie, nazwisko, wiek, numerTelefonu, ulica});
-    }
+                suma += liczba;
+                if (suma == 21) {
+                    cout << "udalo sie zdobyc 21" << endl;
+                    liczbaProb++;
+                    cout << "Liczba prob: " << liczbaProb << endl;
+                    break;
+                } else if (suma > 21) {
+                    throw new MoreThan21Exception("Suma zostala przekroczona powrot to poprzedniej wartosci");
+                }
+            }catch(...) {
+                suma -= liczba;
+                liczbaProb++;
+            }
+        }
+    return 0;
 }
-void wyszukajZPrzedzialu(int dol, int gora) {
-    for(int i = dol; i <= gora; i++) {
-        auto os = ksiazkaTelefoniczna.get<2>().find(i);
-        cout << os -> imie << "\n";
-    }
-}
-int main() {
-    dodaj("Jakub", "Dziem", 21, "123456789", "Nadbystrzycka");
-    dodaj("Barbara", "Dodac", 18, "123456987", "Prosta");
-    dodaj("Anna", "Dziem", 30, "123456798", "Dluga");
-    auto osobaZUlica = ksiazkaTelefoniczna.get<4>().find("Nadbystrzycka");
-    cout << osobaZUlica -> imie << "\n";
-    wyszukajZPrzedzialu(20,30);
-}
+
+
