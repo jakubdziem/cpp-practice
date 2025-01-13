@@ -3,4 +3,5 @@ project(Dziem_Jakub_5_3_Lab2_Zad3)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(cpp-practice main.cpp)
+add_executable(cpp-practice main.cpp
+)
